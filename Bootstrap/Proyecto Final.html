@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Style</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+                url("imagenes/banner.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #1d1d1d;
+            color: white;
+            border: 1px solid #333;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .precio {
+            color: #ff4d4d;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Menú -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-shirt"></i> Dark Style
+            </a>
+
+            <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Banner -->
+
+    <section class="hero" id="inicio">
+
+        <div class="container">
+
+            <h1 class="display-3 fw-bold">
+                Dark Style
+            </h1>
+
+            <p class="lead">
+                Moda alternativa, dark y urbana.
+            </p>
+
+            <a href="#productos" class="btn btn-danger btn-lg">
+                Ver catálogo
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Buscador -->
+
+    <section class="container mt-5">
+
+        <input
+            type="text"
+            class="form-control"
+            id="buscador"
+            placeholder="Buscar ropa..."
+            onkeyup="buscarProducto()">
+
+    </section>
+
+    <!-- Productos -->
+
+    <section class="container py-5" id="productos">
+
+        <h2 class="text-center mb-5">
+            Catálogo
+        </h2>
+
+        <div class="row g-4" id="listaProductos">
+
+            <!-- Producto 1 -->
+
+            <div class="col-md-4 producto">
+
+                <div class="card">
+
+                    <img src="Remera Negra Overzise.webp">
+
+                    <div class="card-body">
+
+                        <h4>Remera Oversize Negra</h4>
+
+                        <p>
+                            Estilo gótico y urbano.
+                        </p>
+
+                        <p>Tallas: S - M - L</p>
+
+                        <p class="precio">₲120.000</p>
+
+                        <button class="btn btn-danger w-100">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Producto 2 -->
+
+            <div class="col-md-4 producto">
+
+                <div class="card">
+
+                    <img src="Pantalon cargo.webp">
+
+                    <div class="card-body">
+
+                        <h4>Pantalón Cargo</h4>
+
+                        <p>
+                            Diseño alternativo.
+                        </p>
+
+                        <p>Tallas: 38 - 40 - 42</p>
+
+                        <p class="precio">₲180.000</p>
+
+                        <button class="btn btn-danger w-100">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Producto 3 -->
+
+            <div class="col-md-4 producto">
+
+                <div class="card">
+
+                    <img src="Campera de Cuero.jpg">
+
+                    <div class="card-body">
+
+                        <h4>Campera de Cuero</h4>
+
+                        <p>
+                            Cuero sintético premium.
+                        </p>
+
+                        <p>Tallas: M - L - XL</p>
+
+                        <p class="precio">₲250.000</p>
+
+                        <button class="btn btn-danger w-100">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Producto 4 -->
+
+            <div class="col-md-4 producto">
+
+                <div class="card">
+
+                    <img src="Hoodie.jpg">
+
+                    <div class="card-body">
+
+                        <h4>Hoodie Oscuro</h4>
+
+                        <p>
+                            Diseño oscuro y cómodo.
+                        </p>
+
+                        <p>Tallas: S - M - L</p>
+
+                        <p class="precio">₲160.000</p>
+
+                        <button class="btn btn-danger w-100">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Producto 5 -->
+
+            <div class="col-md-4 producto">
+
+                <div class="card">
+
+                    <img src="Collar.jpg">
+
+                    <div class="card-body">
+
+                        <h4>Collar Metálico</h4>
+
+                        <p>
+                            Accesorio alternativo.
+                        </p>
+
+                        <p>Tamaño único</p>
+
+                        <p class="precio">₲80.000</p>
+
+                        <button class="btn btn-danger w-100">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Producto 6 -->
+
+            <div class="col-md-4 producto">
+
+                <div class="card">
+
+                    <img src="Champion.jpg">
+
+                    <div class="card-body">
+
+                        <h4>Zapatillas Urbanas</h4>
+
+                        <p>
+                            Diseño moderno.
+                        </p>
+
+                        <p>Tallas: 39 - 43</p>
+
+                        <p class="precio">₲300.000</p>
+
+                        <button class="btn btn-danger w-100">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contacto -->
+
+    <section class="container text-center py-5" id="contacto">
+
+        <h2>Contacto</h2>
+
+        <p>📍 San Lorenzo, Paraguay</p>
+
+        <p>📞 +595 0983 794118</p>
+
+        <p>✉️ contacto@darkstyle.com</p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="text-center p-4">
+
+        <p>
+            © 2026 Dark Style 
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        function buscarProducto() {
+
+            let filtro = document
+                .getElementById("buscador")
+                .value
+                .toLowerCase();
+
+            let productos =
+                document.querySelectorAll(".producto");
+
+            productos.forEach(producto => {
+
+                let texto =
+                    producto.textContent.toLowerCase();
+
+                if (texto.includes(filtro)) {
+
+                    producto.style.display = "block";
+
+                } else {
+
+                    producto.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
